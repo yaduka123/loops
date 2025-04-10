@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var arr =[5,7,2,8,6,1,9,4,3];
+            var big =arr[0];
+            var small=arr[0];
+            
+            for(var i =1; i< arr.length;i++){
+                if(arr[i] > big)big = arr[i]
+            }
+            document.write('biggest element using loop' + big  +'<br/>')
+
+
+for (var i = 1; i < arr.length; i++){
+                if(arr[i] > big) big = arr[i]
+                if(arr[i] <small) small = arr[i]
+
+         }
+        document.write("smallest element :" + small +'<br/>');
+        document.write("biggest element:" +big + '<br/>');
+        arr.map((num) => {
+            if (num< small){
+                small = num
+            }
+
+            if(num > big){
+                big = num
+            }
+        })
+        document.write("smallest element using map:" + small +'<br/>');
+        document.write("biggest element using map:" +big + '<br/>');
+
+        const min = math.min(...number)
+        const max = max(...number)
+
+        document.write('<br/>smallest element:' + min + '<br/>')
+        document.write('biggest element:' + max +'<br/>')
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+function evens(){
+var n = parseInt(document.getElementById("range").value);
+for(var i=1 ; i<=n ; i++){
+if(i%2==0)
+document.write(i + "<br/>");
+}
+}
+</script>
+</head>
+<body>
+Enter Limit : <input type="text" id="range"/>
+<button onclick="evens()"> Even Numbers </button>
+</body>
+</html>

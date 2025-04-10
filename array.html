@@ -1,0 +1,103 @@
+<html lang="en">
+    <head><title>Personal Info List</title>
+        <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f9f9f9;
+                padding: 40px;
+                color: #333;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                color: #444;
+            }
+
+            table {
+                width:100%;
+                border-collapse: collapse;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            th,
+            td{
+                padding:12px 16px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #520c2a;
+                color: #894793;
+            }
+
+            tr:hover{
+                background-color: #f5f5f5;
+           }
+
+
+           .info{
+            margin-bottom: 20px;
+            font-size: 20px;
+           }
+        </style></head>
+    <body>
+        <h1>Personal Info Table</h1>
+        <div class="info" id="info"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Is Single</th>
+                </tr>
+            </thead>
+            <tbody id="data-body"></tbody>
+        </table>
+
+        <script>
+            const Personalinfo = ["apple","mango","banana","pineapple","grapes"];
+           let arr = [
+           {name: 'yaduka', age: 21, sex: 'Female', marriage: true},
+           {name: 'rupa', age: 20, sex: 'Male',marriage: true},
+           {name: 'Sonam ', age: 23, sex: 'Female',marriage: false},
+           {name: 'Tenzin Dorji', age: 23, sex: 'Male',marriage: false},
+           {name: 'Kencho Wangmo', age: 21, sex: 'Female',marriage: false},
+           
+        ]
+        
+        document.getElementById(
+            'info'
+        ).innerText = `The length of array is: ${arr.length}`
+
+const tbody = document.getElementById('data-body')
+arr.map((person) => {
+const row = document.createElement('tr')
+    row.innerHTML = `
+     <td>${person.name.toUpperCase()} </td>
+     <td>${person.age} </td>
+        <td>${person.sex.toUpperCase()} </td>
+            <td>${!person.marriage ? 'Yes' : 'No'} </td>`
+
+            tbody.appendChild(row)
+})
+
+
+            // document.write(arr[0].name + arr[0].age+arr[0].sex+"<br/>");
+            // document.write(arr[1].name + arr[1].age+arr[1].sex+"<br/>");
+            // document.write(arr[2].name + arr[2].age+arr[2].sex+"<br/>");
+            // document.write(arr[3].name + arr[3].age+arr[3].sex+"<br/>");
+            // document.write(arr[4].name + arr[4].age+arr[4].sex+"<br/>");
+
+            // arr.map((person) => {
+            //     document.write(${person.name.toUpperCase()} ${person.age} ${person.sex.toLowerCase()} <br/>)
+            // })
+            
+            // fruites.map((data) => {
+            //     document.write(${data} <br/>)
+            // })
+        </script>
+    </body>
+</html>

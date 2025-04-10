@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<body>
+<script>
+let n = [4, 8, 9, 6, 3, 10, 15, 25, 30];
+document.write("Even elements in array using loop : <br/>");
+for (let i=0 ; i<n.length ; i++){
+if(n[i]%2==0){
+document.write(n[i] + "<br/>")}
+}
+document.write('odd elements in array using map : <br/>')
+n.map((even) =>{
+    if(even % 2  !==0){ 
+    document.write(even + '<br/>')
+}
+})
+</script>
+</body>
+</html>
